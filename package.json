@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-rtanalytika",
+  "version": "1.0.0",
+  "description": "RTAnalytika Module For Nuxt JS Applications",
+  "keywords": [
+    "analytics", "rtanalytika", "nuxt analytics",
+    "nuxt module", "nuxt analytics module"
+  ],
+  "main": "src/module.js",
+  "repository": "https://www.github.com/rifaideen/nuxt-rtanalytika",
+  "author": "Rifaudeen",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "lint-fix": "eslint --ext .js,.vue src --fix"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "latest",
+    "eslint": "latest",
+    "nuxt": "^2.15.8"
+  }
+}
