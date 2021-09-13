@@ -4,6 +4,7 @@ module.exports = function (moduleOptions) {
   const { nuxt } = this
   const defaultOptions = nuxt.options.rtanalytika || {}
   const options = {
+    ignores: [],
     ...defaultOptions,
     ...moduleOptions
   }
@@ -24,13 +25,15 @@ module.exports = function (moduleOptions) {
 
   this.options.head.script.push({
     his: 'rtanalytika-js-file',
-    src: 'https://server.rtanalytika.com/analytics-spa.js'
+    src: 'https://server.rtanalytika.com/analytics-spa.js',
+    async: true
   })
 
   // register the plugin
   this.addPlugin({
     src: join(__dirname, 'plugin.js'),
-    fileName: 'rtanalytika.client.js'
+    fileName: 'rtanalytika.client.js',
+    options
   })
 }
 
